@@ -4,14 +4,46 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
-  },
-  "dependencies": {
-    "react": "15.3.2",
-    "react-native": "^0.35.0"
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "test-chrome": "node-debug --preload false --nodejs --harmony jest --runInBand"
   },
   "jest": {
-    "preset": "jest-react-native"
+    "preset": "jest-react-native",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(es6|js|json)$",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "es6"
+    ],
+    "haste": {
+      "defaultPlatform": "ios",
+      "platforms": [
+        "ios",
+        "android"
+      ],
+      "providesModuleNodeModules": [
+        "react",
+        "react-native"
+      ]
+    },
+    "collectCoverage": false,
+    "verbose": true
+  },
+  "dependencies": {
+    "apollo-client": "0.5.0-0",
+    "graphql-tag": "0.1.14",
+    "immutable": "3.8.1",
+    "react": "15.3.2",
+    "react-apollo": "0.5.11",
+    "react-native": "0.35.0",
+    "react-native-router-flux": "3.36.0",
+    "react-redux": "4.4.5",
+    "redux": "3.6.0",
+    "redux-thunk": "2.1.0"
   },
   "devDependencies": {
     "babel-core": "6.14.0",
