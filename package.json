@@ -34,7 +34,7 @@
     "verbose": true
   },
   "dependencies": {
-    "apollo-client": "0.5.0-0",
+    "apollo-client": "0.4.21",
     "graphql-tag": "0.1.14",
     "immutable": "3.8.1",
     "react": "15.3.2",
