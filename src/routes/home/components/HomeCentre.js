@@ -11,19 +11,43 @@ import {
   Text
 } from 'react-native'
 
-export default class HomeCentre extends Component {
+import { graphql } from 'react-apollo'
+import gql from 'graphql-tag'
+
+import LoadingIndicator from 'components/LoadingIndicator/LoadingIndicator'
+import HomeList from './HomeList'
+
+class HomeCentre extends Component {
   constructor (props) {
     super(props)
   }
 
   render () {
+    console.log(this.props.data)
+    let dataSource = (this.props.data.posts) ? this.props.data.posts : []
     return (
       <View style={styles.container}>
-        <Text>This is apollo native application</Text>
+        <HomeList dataSource={dataSource} />
+        <LoadingIndicator isVisible={this.props.data.loading} />
       </View>
     )
   }
 }
+
+const QueryHomeCentre = gql`
+  query allPosts {
+    posts {
+      id
+      title
+      votes
+      author {
+        id
+        firstName
+        lastName
+      }
+    }
+  }
+`
 
 const styles = StyleSheet.create({
   container: {
@@ -34,3 +58,7 @@ const styles = StyleSheet.create({
     bottom: 0
   }
 })
+
+const withData = graphql(QueryHomeCentre)
+
+export default withData(HomeCentre)
