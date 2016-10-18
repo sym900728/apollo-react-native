@@ -1,0 +1,39 @@
+{
+  "name": "Apollo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "15.3.2",
+    "react-native": "^0.35.0"
+  },
+  "jest": {
+    "preset": "jest-react-native"
+  },
+  "devDependencies": {
+    "babel-core": "6.14.0",
+    "babel-eslint": "6.1.2",
+    "babel-jest": "16.0.0",
+    "babel-preset-react-native": "1.9.0",
+    "babel-root-import": "4.1.1",
+    "docker": "0.2.14",
+    "eslint": "3.4.0",
+    "eslint-config-standard": "6.0.0",
+    "eslint-config-standard-react": "4.0.0",
+    "eslint-plugin-babel": "3.3.0",
+    "eslint-plugin-promise": "2.0.1",
+    "eslint-plugin-react": "6.2.0",
+    "eslint-plugin-standard": "2.0.0",
+    "istanbul": "0.4.5",
+    "jest": "16.0.1",
+    "jest-cli": "16.0.1",
+    "jest-react-native": "16.0.0",
+    "nock": "8.0.0",
+    "react-addons-test-utils": "15.3.1",
+    "react-test-renderer": "15.3.2",
+    "redux-mock-store": "1.0.3"
+  }
+}
