@@ -14,6 +14,7 @@ import {
 } from 'react-native-router-flux'
 
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import thunk from 'redux-thunk'
 
 import { connect } from 'react-redux'
 import { ApolloProvider } from 'react-apollo'
@@ -36,7 +37,7 @@ const store = createStore(
     apollo: client.reducer()
   }),
   {},
-  compose(applyMiddleware(client.middleware()))
+  compose(applyMiddleware(thunk, client.middleware()))
 )
 
 const RouterWithRedux = connect()(Router)
