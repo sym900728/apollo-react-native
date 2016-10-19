@@ -49,6 +49,8 @@ const QueryHomeCentre = gql`
   }
 `
 
+const withData = graphql(QueryHomeCentre)
+
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
@@ -58,7 +60,5 @@ const styles = StyleSheet.create({
     bottom: 0
   }
 })
-
-const withData = graphql(QueryHomeCentre)
 
 export default withData(HomeCentre)
