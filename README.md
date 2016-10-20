@@ -5,7 +5,9 @@ This is react native demo application about apollo
 ## Features
 
 * [react](https://github.com/facebook/react)
+* [react-native](https://facebook.github.io/react-native)
 * [redux](https://github.com/rackt/redux)
+* [redux-thunk](https://github.com/gaearon/redux-thunk)
 * [apollo](http://dev.apollodata.com/react/)
 * [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
 * [babel](https://github.com/babel/babel)
