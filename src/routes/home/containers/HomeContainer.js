@@ -12,12 +12,13 @@ import HomeCentre from '../components/HomeCentre'
 
 const actions = []
 
-function mapStateToProps (state) {
+const mapStateToProps = (state) => {
   return {
     ...state
   }
 }
-function mapDispatchToProps (dispatch) {
+
+const mapDispatchToProps = (dispatch) => {
   const creators = Map()
     .merge(...actions)
     .filter(value => typeof value === 'function')

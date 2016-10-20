@@ -2,6 +2,15 @@
 
 This is react native demo application about apollo
 
+## Features
+
+* [react](https://github.com/facebook/react)
+* [redux](https://github.com/rackt/redux)
+* [apollo](http://dev.apollodata.com/react/)
+* [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
+* [babel](https://github.com/babel/babel)
+* [eslint](http://eslint.org)
+
 ## Installation
 
 Clone the repository and run `npm install`:
@@ -20,8 +29,19 @@ This app talks to the hello world server, available here: https://github.com/apo
 
 Once you've installed and started that server, start this app with:
 
+### Starting the app with a ios simulator
+
 ```
 react-native run-ios
 ```
 
 It will open a iOS simulator.
+
+### Starting the app with an android simulator
+
+At first, you must start an android simulator.
+
+```
+react-native run-android
+```
+
